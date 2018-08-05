@@ -20,5 +20,5 @@ role:
     # - GEM_HOME=$HOME/.gem
     # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
     - ruby --version
-    - command: ./install-gem.sh "bundler"
+    - command: gem install --quiet bundler
       os: ["!archlinux"]
