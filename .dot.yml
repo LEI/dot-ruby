@@ -20,5 +20,7 @@ role:
     # - GEM_HOME=$HOME/.gem
     # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
     - ruby --version
-    - command: gem install --quiet bundler
-      os: ["!arch"]
+    # - gem update --bindir /usr/local/bin --system
+    # - gem update --bindir /usr/local/bin
+    # - command: gem install --bindir /usr/local/bin --quiet bundler
+    #   os: ["!arch"]
