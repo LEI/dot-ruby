@@ -1,8 +1,7 @@
 ---
 role:
   pkg:
-    # - name: rbenv
-    #   os: ["darwin"]
+    # TODO: - rbenv
     - ruby
     # - name: ruby-dev
     #   os: ["debian"]
@@ -20,6 +19,7 @@ role:
     # - GEM_HOME=$HOME/.gem
     # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
     - ruby --version
+    # - darwin: PATH="/usr/local/Cellar/ruby/2.5.1/bin:$PATH"
     # - gem update --bindir /usr/local/bin --system
     # - gem update --bindir /usr/local/bin
     # - command: gem install --bindir /usr/local/bin --quiet bundler
