@@ -1,11 +1,24 @@
 ---
 role:
   pkg:
+    # - name: rbenv
+    #   os: ["darwin"]
     - ruby
-    # - name: bundler
-    #   os: ["!centos"]
+    # - name: ruby-dev
+    #   os: ["debian"]
+    # - name: rubygems
+    #   os: ["cygwin"]
+    # https://bundler.io/
+    # Manage gems with pacman on arch: ruby-<gem>
+    # https://wiki.archlinux.org/index.php/Ruby#Managing_RubyGems_using_pacman
+    # https://github.com/anatol/quarry
+    - name: ruby-bundler
+      os: ["archlinux"]
   link:
     - .gemrc
   post_install:
+    # - GEM_HOME=$HOME/.gem
+    # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
     - ruby --version
-    # - command: ./install-bundler.sh
+    - command: ./install-gem.sh "bundler"
+      os: ["!archlinux"]
