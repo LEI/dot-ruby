@@ -1,0 +1,11 @@
+---
+role:
+  pkg:
+    - ruby
+    # - name: bundler
+    #   os: ["!centos"]
+  link:
+    - .gemrc
+  post_install:
+    - ruby --version
+    # - command: ./install-bundler.sh
