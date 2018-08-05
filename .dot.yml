@@ -13,7 +13,7 @@ role:
     # https://wiki.archlinux.org/index.php/Ruby#Managing_RubyGems_using_pacman
     # https://github.com/anatol/quarry
     - name: ruby-bundler
-      os: ["archlinux"]
+      os: ["arch"]
   link:
     - .gemrc
   post_install:
@@ -21,4 +21,4 @@ role:
     # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
     - ruby --version
     - command: gem install --quiet bundler
-      os: ["!archlinux"]
+      os: ["!arch"]
