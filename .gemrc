@@ -1,3 +1,8 @@
 ---
-:verbose: true
-gem: --no-rdoc --no-ri
+backtrace: true
+benchmark: false
+# disable_default_gem_server:
+gem: --no-document --suggestions
+# gempath:
+# sources:
+verbose: true
