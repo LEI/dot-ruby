@@ -2,7 +2,8 @@
 role:
   pkg:
     # TODO: - rbenv
-    - ruby
+    - name: ruby
+      action: install
     # - name: ruby-dev
     #   os: ["debian"]
     # - name: rubygems
