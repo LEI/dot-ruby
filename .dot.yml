@@ -16,8 +16,10 @@ role:
     # Manage gems with pacman on arch: ruby-<gem>
     # https://wiki.archlinux.org/index.php/Ruby#Managing_RubyGems_using_pacman
     # https://github.com/anatol/quarry
-    - name: ruby-bundler
-      os: ["arch"]
+    # - name: ruby-bundler # rubygems
+    #   os: ["arch"]
+    - name: libgemplugin-ruby
+      os: ["debian"]
   link:
     - .gemrc
   post_install:
