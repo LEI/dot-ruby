@@ -4,6 +4,12 @@ role:
     # TODO: - rbenv
     - name: ruby
       action: install
+      os: ["!darwin"]
+    - name: ruby # ruby-build
+      action: install
+      os: ["darwin"]
+      args:
+        - --with-openssl-dir="$(brew --prefix openssl)"
     # - name: ruby-dev
     #   os: ["debian"]
     # - name: rubygems
@@ -14,12 +20,15 @@ role:
     # https://github.com/anatol/quarry
     - name: ruby-bundler
       os: ["arch"]
+    # - name: rbenv-bundler
+    #   os: ["darwin"]
   link:
     - .gemrc
   post_install:
     # - GEM_HOME=$HOME/.gem
     # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
     - ruby --version
+    - gem --version
     # - TODO darwin: PATH="/usr/local/Cellar/ruby/2.5.1/bin:$PATH"
     # - gem update --bindir /usr/local/bin --system
     # - gem update --bindir /usr/local/bin
