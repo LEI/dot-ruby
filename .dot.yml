@@ -18,7 +18,7 @@ role:
     # https://github.com/anatol/quarry
     # - name: ruby-bundler # rubygems
     #   os: ["arch"]
-    - name: "ruby$(ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]')-dev"
+    - name: "ruby$(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev"
       # rubygems, libgemplugin-ruby
       os: ["debian"]
   link:
