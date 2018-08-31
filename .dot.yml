@@ -18,7 +18,7 @@ role:
     # https://github.com/anatol/quarry
     # - name: ruby-bundler # rubygems
     #   os: ["arch"]
-    - name: libgemplugin-ruby
+    - name: rubygems # libgemplugin-ruby
       os: ["debian"]
   link:
     - .gemrc
