@@ -9,9 +9,8 @@ role:
       os: ["darwin"]
       args: --with-openssl-dir="$(brew --prefix openssl)"
     # ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev # libgemplugin-ruby
-    - name:
-        - build-essential
-        - ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
+    # requires build-essential?
+    - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
       # rubygems, libgemplugin-ruby
       os: ["debian"]
     # - name: rubygems
@@ -24,9 +23,9 @@ role:
     #   os: ["arch"]
   link:
     - .gemrc
-  post_install:
-    # - GEM_HOME=$HOME/.gem
-    # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+  post_install: # $HOME/.gem/....
+    # - GEM_HOME=$(ruby -e 'print Gem.user_dir')
+    # - PATH="$PATH:$GEM_HOME/bin"
     - ruby --version
     - gem --version
     - gem env gemdir
