@@ -21,8 +21,8 @@ role:
     # https://github.com/anatol/quarry
     # - name: ruby-bundler # rubygems
     #   os: ["arch"]
-  # link:
-  #   - .gemrc
+  link:
+    - .gemrc
   post_install: # $HOME/.gem/....
     # - GEM_HOME=$(ruby -e 'print Gem.user_dir')
     # - PATH="$PATH:$GEM_HOME/bin"
