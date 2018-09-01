@@ -29,9 +29,9 @@ role:
     - .gemrc
   post_install: # $HOME/.gem/....
     # Install header files for ruby
-    - command: "sudo apk add -q ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev"
+    - command: "sudo apk add -q ruby`ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]'`-dev"
       os: ["alpine"]
-    - command: "sudo apt-get install -qqy ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev"
+    - command: "sudo apt-get install -qqy ruby`ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]'`-dev"
       os: ["debian"]
     # - GEM_HOME=$(ruby -e 'print Gem.user_dir')
     # - PATH="$PATH:$GEM_HOME/bin"
