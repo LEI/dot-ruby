@@ -1,5 +1,8 @@
 ---
 role:
+  env: # gem_home: $HOME/.gem/...
+    GEM_HOME: "$(ruby -e 'print Gem.user_dir')"
+  install: echo $GEM_HOME
   pkg:
     - name: ruby
       action: install
