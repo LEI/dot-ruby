@@ -12,9 +12,10 @@ role:
     # requires build-essential?
     # - name: ruby-rdoc # ri...
     #   os: ["alpine"]
+    # Install header files for ruby
     - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
       # rubygems, libgemplugin-ruby
-      os: ["debian"]
+      os: ["alpine", "debian"]
     # - name: rubygems
     #   os: ["cygwin"]
     # https://bundler.io/
