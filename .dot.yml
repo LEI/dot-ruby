@@ -10,9 +10,7 @@ role:
       args: --with-openssl-dir="$(brew --prefix openssl)"
     # ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev # libgemplugin-ruby
     # requires build-essential?
-    - name:
-        - ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
-        - ruby-rdoc
+    - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
       # rubygems, libgemplugin-ruby
       os: ["debian"]
     # - name: rubygems
@@ -23,8 +21,8 @@ role:
     # https://github.com/anatol/quarry
     # - name: ruby-bundler # rubygems
     #   os: ["arch"]
-  link:
-    - .gemrc
+  # link:
+  #   - .gemrc
   post_install: # $HOME/.gem/....
     # - GEM_HOME=$(ruby -e 'print Gem.user_dir')
     # - PATH="$PATH:$GEM_HOME/bin"
