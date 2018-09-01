@@ -8,8 +8,10 @@ role:
       action: install
       os: ["darwin"]
       args: --with-openssl-dir="$(brew --prefix openssl)"
-    # - name: ruby-dev
-    #   os: ["debian"]
+    # ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev # libgemplugin-ruby
+    - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
+      # rubygems, libgemplugin-ruby
+      os: ["debian"]
     # - name: rubygems
     #   os: ["cygwin"]
     # https://bundler.io/
@@ -18,9 +20,6 @@ role:
     # https://github.com/anatol/quarry
     # - name: ruby-bundler # rubygems
     #   os: ["arch"]
-    - name: "ruby$(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev"
-      # rubygems, libgemplugin-ruby
-      os: ["debian"]
   link:
     - .gemrc
   post_install:
