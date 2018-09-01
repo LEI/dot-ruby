@@ -27,6 +27,8 @@ role:
     # - PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
     - ruby --version
     - gem --version
+    - ruby -e 'print Gem.user_dir'
+    - echo $GEM_HOME
     # - TODO darwin: PATH="/usr/local/Cellar/ruby/2.5.1/bin:$PATH"
     # - gem update --bindir /usr/local/bin --system
     # - gem update --bindir /usr/local/bin
