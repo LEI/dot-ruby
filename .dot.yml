@@ -9,14 +9,14 @@ role:
       os: ["darwin"]
       args: --with-openssl-dir="$(brew --prefix openssl)"
 
-    # - name: build-essential
-    #   os: ["debian"]
+    - name: build-essential
+      os: ["debian"]
     # - name: ruby-rdoc # ri...
     #   os: ["alpine"]
     # Install header files for ruby
-    # - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
-    #   # rubygems, libgemplugin-ruby
-    #   os: ["alpine", "debian"]
+    - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
+      # rubygems, libgemplugin-ruby
+      os: ["alpine", "debian"]
     # - name:
     #   - ruby-devel
     #   - ruby-irb
