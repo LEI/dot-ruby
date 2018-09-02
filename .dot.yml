@@ -14,15 +14,15 @@ role:
     # - name: ruby-rdoc # ri...
     #   os: ["alpine"]
     # Install header files for ruby
-    - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
-      # rubygems, libgemplugin-ruby
-      os: ["alpine", "debian"]
-    - name:
-      - ruby-devel
-      - ruby-irb
-      - ruby-rdoc
-      - ruby-ri
-      os: ["centos"]
+    # - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
+    #   # rubygems, libgemplugin-ruby
+    #   os: ["alpine", "debian"]
+    # - name:
+    #   - ruby-devel
+    #   - ruby-irb
+    #   - ruby-rdoc
+    #   - ruby-ri
+    #   os: ["centos"]
 
     # - name: rubygems
     #   os: ["cygwin"]
@@ -39,11 +39,8 @@ role:
     # - PATH="$PATH:$GEM_HOME/bin"
     - ruby --version
     - gem --version
-    - gem env gemdir
-    - gem env gempath
-    - gem env
-    # - TODO darwin: PATH="/usr/local/Cellar/ruby/2.5.1/bin:$PATH"
-    # - gem update --bindir /usr/local/bin --system
-    # - gem update --bindir /usr/local/bin
+    # - gem env gemdir
+    # - gem env gempath
+    # - gem env
     # - command: gem install --bindir /usr/local/bin --quiet bundler
     #   os: ["!arch"]
