@@ -1,6 +1,7 @@
 ---
 role:
   pkg:
+    # https://www.ruby-lang.org/en/documentation/installation/
     - name: ruby
       action: install
       os: ["!darwin"]
@@ -17,8 +18,8 @@ role:
     # Required ruby header files for gem # rubygems, libgemplugin-ruby
     - name: ruby-dev # $(ruby -e 'puts RUBY_VERSION[/\\d+\\.\\d+/]')-dev
       os: ["alpine", "debian"]
-    - name: ruby-devel # ruby-irb, ruby-rdoc, ruby-ri
-      os: ["centos"]
+    # - name: ruby-devel # ruby-irb, ruby-rdoc, ruby-ri
+    #   os: ["centos"]
 
     # - name: rubygems
     #   os: ["cygwin"]
