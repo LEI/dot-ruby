@@ -33,6 +33,7 @@ role:
   post_install: # $HOME/.gem/....
     # - GEM_HOME=$(ruby -e 'print Gem.user_dir')
     # - PATH="$PATH:$GEM_HOME/bin"
+    # if: '[ "$DOT_PKG" -eq 1 ]'
     - ruby --version
     - gem --version
     # - gem env gemdir
