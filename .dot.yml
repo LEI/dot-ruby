@@ -9,8 +9,9 @@ role:
       os: ["darwin"]
       args: --with-openssl-dir="$(brew --prefix openssl)"
 
-    # - name: build-essential
-    #   os: ["debian"]
+    # Required to build ruby gems
+    - name: build-essential
+      os: ["debian"]
     # - name: ruby-rdoc # ri...
     #   os: ["alpine"]
     # Install header files for ruby (required for gem)
