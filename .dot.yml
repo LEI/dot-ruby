@@ -39,6 +39,8 @@ role:
     - gem --version
     # - gem env gemdir
     # - gem env gempath
-    # - gem env
+    - gem env
+    - echo ${GEM_HOME}
+    - echo $(ruby -e 'print Gem.user_dir')
     # - command: gem install --bindir /usr/local/bin --quiet bundler
     #   os: ["!arch"]
