@@ -5,7 +5,7 @@ role:
     - name: ruby
       action: install
       os: ["!darwin"]
-    - name: ruby # rbenv/rvm, ruby-build
+    - name: ruby # rbenv/rvm, ruby-build, chruby
       action: install
       os: ["darwin"]
       args: --with-openssl-dir="$(brew --prefix openssl)"
